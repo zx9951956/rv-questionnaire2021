@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="zh-TW">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+    <link rel="canonical" href="https://letswrite.tw/custom-google-form/">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" .css" type="text/css" />
+    <title>線上問卷</title>
+    <script>
+        function showWord(word, yin, diao) {
+            document.write('<div class="d-flex"><div class="word d-flex align-items-center">' + word +
+                '</div><div class="yin d-flex justify-content-center" >' + yin +
+                '</div><div class="diao mr-1 d-flex align-items-center">' +
+                diao + '</div></div>');
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+
+    <form onsubmit="return false">
+        <!-- 第一題 -->
+        <div class="problem">
+            <legend class="col-form-label d-flex align-items-center" style="height: 20%;">
+                <div class="px-5 d-flex align-items-center problem-word flex-wrap">
+                    1.
+                    &nbsp;
+                    <script>
+                        showWord('性', 'ㄒㄧㄥ', 'ˋ')
+                        showWord('別', 'ㄅㄧㄝ', 'ˊ')
+                    </script>
+                </div>
+            </legend>
+            <div class="d-flex " style="height: 80%;">
+                <div class=" px-5 w-100 py-2">
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-sex rounded-pill">
+                        <input class="form-check-input" type="radio" name="sex" id="boy" value="男性"
+                            onchange="chooseAnswer(1)" onclick="changeColor('sex')" required>
+                        <label class="form-check-label w-100" for="boy">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center flex-wrap ">
+                                    <script>
+                                        showWord('男', 'ㄋㄢ', 'ˊ')
+                                        showWord('生', 'ㄕㄥ', '')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-sex rounded-pill">
+                        <input class="form-check-input" type="radio" name="sex" id="girl" value="女性"
+                            onchange="chooseAnswer(1)" onclick="changeColor('sex')" required>
+                        <label class="form-check-label w-100" for="girl">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                    <script>
+                                        showWord('女', 'ㄋㄩ', 'ˇ')
+                                        showWord('生', 'ㄕㄥ', '')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 第二題 -->
+        <div class="problem">
+            <legend class="col-form-label d-flex align-items-center" style="height: 20%;">
+                <div class="px-5 d-flex align-items-center problem-word flex-wrap">
+                    2.
+                    &nbsp;
+                    <script>
+                        showWord('年', 'ㄋㄧㄢ', 'ˊ')
+                        showWord('齡', 'ㄌㄧㄥ', 'ˊ')
+                    </script>
+                </div>
+            </legend>
+            <div class="d-flex " style="height: 80%;">
+                <div class=" px-5 w-100 py-2">
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-year rounded-pill">
+                        <input class="form-check-input" type="radio" name="year" id="year1" value="7歲以下"
+                            onchange="chooseAnswer(2)" onclick="changeColor('year')" required>
+                        <label class="form-check-label w-100" for="year1">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                    7
+                                    &nbsp;
+                                    <script>
+                                        showWord('歲', 'ㄙㄨㄟ', 'ˋ')
+                                        showWord('以', 'ㄧ', 'ˇ')
+                                        showWord('下', 'ㄒㄧㄚ', 'ˋ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-year rounded-pill">
+                        <input class="form-check-input" type="radio" name="year" id="year2" value="7~12歲"
+                            onchange="chooseAnswer(2)" onclick="changeColor('year')" required>
+                        <label class="form-check-label w-100" for="year2">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                    7~12
+                                    &nbsp;
+                                    <script>
+                                        showWord('歲', 'ㄙㄨㄟ', 'ˋ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第三題 -->
+        <div class="problem">
+            <legend class="col-form-label d-flex align-items-center" style="height: 20%;">
+                <div class="px-5 d-flex align-items-center problem-word flex-wrap">
+                    3.
+                    &nbsp;
+                    <script>
+                        showWord('居', 'ㄐㄩ', '')
+                        showWord('住', 'ㄓㄨ', 'ˋ')
+                        showWord('地', 'ㄉㄧ', 'ˋ')
+                    </script>
+                </div>
+            </legend>
+            <div class="d-flex" style="height: 80%;">
+                <div class=" px-5 w-100 py-2 py-2">
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-place rounded-pill">
+                        <input class="form-check-input" type="radio" name="place" id="place1" value="台北市"
+                            onchange="chooseAnswer(3)" onclick="changeColor('place')" required>
+                        <label class="form-check-label w-100" for="place1">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('台', 'ㄊㄞ', 'ˊ')
+                                        showWord('北', 'ㄅㄟ', 'ˇ')
+                                        showWord('市', 'ㄕ', 'ˋ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-place rounded-pill">
+                        <input class="form-check-input" type="radio" name="place" id="place2" value="新北市"
+                            onchange="chooseAnswer(3)" onclick="changeColor('place')" required>
+                        <label class="form-check-label w-100" for="place2">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('新', 'ㄒㄧㄣ', '')
+                                        showWord('北', 'ㄅㄟ', 'ˇ')
+                                        showWord('市', 'ㄕ', 'ˋ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-place rounded-pill">
+                        <input class="form-check-input" type="radio" name="place" id="place3" value="桃園市"
+                            onchange="chooseAnswer(3)" onclick="changeColor('place')" required>
+                        <label class="form-check-label w-100" for="place3">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('桃', 'ㄊㄠ', 'ˊ')
+                                        showWord('園', 'ㄩㄢ', 'ˊ')
+                                        showWord('市', 'ㄕ', 'ˋ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-place rounded-pill">
+                        <input class="form-check-input" type="radio" name="place" id="place4" value="新竹市"
+                            onchange="chooseAnswer(3)" onclick="changeColor('place')" required>
+                        <label class="form-check-label w-100" for="place4">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('新', 'ㄒㄧㄣ', '')
+                                        showWord('竹', 'ㄓㄨ', 'ˊ')
+                                        showWord('市', 'ㄕ', 'ˋ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-place rounded-pill">
+                        <input class="form-check-input" type="radio" name="place" id="place_other" value="其他"
+                            onchange="chooseAnswer(3)" onclick="changeColor('place')" required>
+                        <label class="form-check-label w-100" for="place_other">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('其', 'ㄑㄧ', 'ˊ')
+                                        showWord('他', 'ㄊㄚ', '')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第四題 -->
+        <div class="problem">
+            <legend class="col-form-label d-flex align-items-center" style="height: 20%;">
+                <div class="px-3 d-flex align-items-center problem-word flex-wrap">
+                    4.
+                    &nbsp;
+                    <script>
+                        showWord('你', 'ㄋㄧ', 'ˇ')
+                    </script>
+                    （
+                    &nbsp;
+                    <script>
+                        showWord('妳', 'ㄋㄧ', 'ˇ')
+                    </script>
+                    ）
+                    <script>
+                        showWord('有', 'ㄧㄡ', 'ˇ')
+                        showWord('來', 'ㄌㄞ', 'ˊ')
+                        showWord('過', 'ㄍㄨㄛ', 'ˋ')
+                        showWord('新', 'ㄒㄧㄣ', '')
+                        showWord('屋', 'ㄨ', '')
+                        showWord('農', 'ㄋㄨㄥ', 'ˊ')
+                        showWord('博', 'ㄅㄛ', 'ˊ')
+                        showWord('環', 'ㄏㄨㄢ', 'ˊ')
+                        showWord('境', 'ㄐㄧㄥ', 'ˋ')
+                        showWord('教', 'ㄐㄧㄠ', 'ˋ')
+                        showWord('育', 'ㄩ', 'ˋ')
+                        showWord('園', 'ㄩㄢ', 'ˊ')
+                        showWord('區', 'ㄑㄩ', '')
+                        showWord('嗎', '˙ㄇㄚ', '')
+                    </script>
+                    ?
+                </div>
+            </legend>
+            <div class="d-flex item-sm" style="height: 80%;">
+                <div class=" px-3 w-100 py-2">
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-time rounded-pill">
+                        <input class="form-check-input" type="radio" name="time" id="time1" value="有"
+                            onchange="chooseAnswer(4)" onclick="changeColor('time')" required>
+                        <label class="form-check-label w-100" for="time1">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('有', 'ㄧㄡ', 'ˇ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-time rounded-pill">
+                        <input class="form-check-input" type="radio" name="time" id="time2" value="無"
+                            onchange="chooseAnswer(4)" onclick="changeColor('time')" required>
+                        <label class="form-check-label w-100" for="time2">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('無', 'ㄨ', 'ˊ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第五題 -->
+        <div class="problem">
+            <legend class="col-form-label d-flex align-items-center" style="height: 20%;">
+                <div class="px-3 d-flex align-items-center problem-word flex-wrap">
+                    5.
+                    &nbsp;
+                    <script>
+                        showWord('你', 'ㄋㄧ', 'ˇ')
+                    </script>
+                    （
+                    &nbsp;
+                    <script>
+                        showWord('妳', 'ㄋㄧ', 'ˇ')
+                    </script>
+                    ）
+                    <script>
+                        showWord('覺', 'ㄐㄩㄝ', 'ˊ')
+                        showWord('得', '˙ㄉㄜ', '')
+                        showWord('今', 'ㄐㄧㄣ', '')
+                        showWord('天', 'ㄊㄧㄢ', '')
+                        showWord('最', 'ㄗㄨㄟ', 'ˋ')
+                        showWord('有', 'ㄧㄡ', 'ˇ')
+                        showWord('特', 'ㄊㄜ', 'ˋ')
+                        showWord('色', 'ㄙㄜ', 'ˋ')
+                        showWord('的', '˙ㄉㄜ', '')
+                        showWord('展', 'ㄓㄢ', 'ˇ')
+                        showWord('館', 'ㄍㄨㄢ', 'ˇ')
+                        showWord('有', 'ㄧㄡ', 'ˇ')
+                        showWord('哪', 'ㄋㄚ', 'ˇ')
+                        showWord('些', 'ㄒㄧㄝ', '')
+                    </script>
+                    （
+                    &nbsp;
+                    <script>
+                        showWord('可', 'ㄎㄜ', 'ˇ')
+                        showWord('複', 'ㄈㄨ', 'ˋ')
+                        showWord('選', 'ㄒㄩㄢ', 'ˇ')
+                    </script>
+                    ）
+                    ?
+                </div>
+            </legend>
+            <div class="d-flex item-sm" style="height: 80%;">
+                <div class=" px-3 w-100">
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-exhibitionHall rounded-pill">
+                        <input class="form-check-input" type="checkbox" name="exhibitionHall" id="exhibitionHall1"
+                            value="無代合願" onchange="chooseCheckBox(5)" onclick="changeColor('exhibitionHall')">
+                        <label class="form-check-label w-100" for="exhibitionHall1">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('無', 'ㄨ', 'ˊ')
+                                        showWord('代', 'ㄉㄞ', 'ˋ')
+                                        showWord('合', 'ㄏㄜ', 'ˊ')
+                                        showWord('願', 'ㄩㄢ', 'ˋ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-exhibitionHall rounded-pill">
+                        <input class="form-check-input" type="checkbox" name="exhibitionHall" id="exhibitionHall2"
+                            value="森活溫室" onchange="chooseCheckBox(5)" onclick="changeColor('exhibitionHall')">
+                        <label class="form-check-label w-100" for="exhibitionHall2">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center ">
+                                    <script>
+                                        showWord('森', 'ㄕㄥ', '')
+                                        showWord('活', 'ㄏㄨㄛ', 'ˊ')
+                                        showWord('溫', 'ㄨㄣ', '')
+                                        showWord('室', 'ㄕ', 'ˋ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-exhibitionHall rounded-pill">
+                        <input class="form-check-input" type="checkbox" name="exhibitionHall" id="exhibitionHall3"
+                            value="奇幻漂流" onchange="chooseCheckBox(5)" onclick="changeColor('exhibitionHall')">
+                        <label class="form-check-label w-100" for="exhibitionHall3">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('奇', 'ㄑ一', 'ˊ')
+                                        showWord('幻', 'ㄏㄨㄢ', 'ˋ')
+                                        showWord('飄', 'ㄆ一ㄠ', '')
+                                        showWord('流', 'ㄌ一ㄡ', 'ˊ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-exhibitionHall rounded-pill">
+                        <input class="form-check-input" type="checkbox" name="exhibitionHall" id="exhibitionHall4"
+                            value="綠色方舟" onchange="chooseCheckBox(5)" onclick="changeColor('exhibitionHall')">
+                        <label class="form-check-label w-100" for="exhibitionHall4">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center ">
+                                    <script>
+                                        showWord('綠', 'ㄌㄩ', 'ˋ')
+                                        showWord('色', 'ㄙㄜ', 'ˋ')
+                                        showWord('方', 'ㄈㄤ', '')
+                                        showWord('舟', 'ㄓㄡ', '')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div class=" item-sm align-items-center justify-content-center p-3" id="next">
+                        <div id="button-next" class="px-5 rounded-pill btn col-sm-12 d-flex justify-content-center"
+                            style="background: #01cad8;color:#fff;">
+                            <label class="form-check-label w-100" for="time1">
+                                <legend class="col-form-label">
+                                    <div class="d-flex align-items-center justify-content-center ">
+                                        <script>
+                                            showWord('下', 'ㄒㄧㄚ', 'ˋ')
+                                            showWord('一', 'ㄧ', '')
+                                            showWord('題', 'ㄊㄧ', 'ˊ')
+                                        </script>
+                                    </div>
+                                </legend>
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第六題 -->
+        <div class="problem">
+            <legend class="col-form-label d-flex align-items-center" style="height: 20%;">
+                <div class="px-3 d-flex align-items-center problem-word flex-wrap">
+                    6.
+                    &nbsp;
+                    <script>
+                        showWord('你', 'ㄋㄧ', 'ˇ')
+                    </script>
+                    （
+                    &nbsp;
+                    <script>
+                        showWord('妳', 'ㄋㄧ', 'ˇ')
+                    </script>
+                    ）
+                    <script>
+                        showWord('以', 'ㄧ', 'ˇ')
+                        showWord('後', 'ㄏㄡ', 'ˋ')
+                        showWord('還', 'ㄏㄞ', 'ˊ')
+                        showWord('願', 'ㄩㄢ', 'ˋ')
+                        showWord('意', 'ㄧ', 'ˋ')
+                        showWord('來', 'ㄌㄞ', 'ˊ')
+                        showWord('新', 'ㄒㄧㄣ', '')
+                        showWord('屋', 'ㄨ', '')
+                        showWord('農', 'ㄋㄨㄥ', 'ˊ')
+                        showWord('博', 'ㄅㄛ', 'ˊ')
+                        showWord('環', 'ㄏㄨㄢ', 'ˊ')
+                        showWord('境', 'ㄐㄧㄥ', 'ˋ')
+                        showWord('教', 'ㄐㄧㄠ', 'ˋ')
+                        showWord('育', 'ㄩ', 'ˋ')
+                        showWord('園', 'ㄩㄢ', 'ˊ')
+                        showWord('區', 'ㄑㄩ', '')
+                        showWord('嗎', '˙ㄇㄚ', '')
+                    </script>
+                    ?
+                </div>
+            </legend>
+            <div class="d-flex item-sm" style="height: 80%;">
+                <div class=" px-3 w-100 py-2">
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-come rounded-pill">
+                        <input class="form-check-input" type="radio" name="come" id="come1" value="願意"
+                            onchange="chooseAnswer(6)" onclick="changeColor('come')" required>
+                        <label class="form-check-label w-100" for="come1">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                    <script>
+                                        showWord('願', 'ㄩㄢ', 'ˋ')
+                                        showWord('意', 'ㄧ', 'ˋ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-come rounded-pill">
+                        <input class="form-check-input" type="radio" name="come" id="come2" value="不願意"
+                            onchange="chooseAnswer(6)" onclick="changeColor('come')" required>
+                        <label class="form-check-label w-100" for="come2">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('不', 'ㄅㄨ', 'ˊ')
+                                        showWord('願', 'ㄩㄢ', 'ˋ')
+                                        showWord('意', 'ㄧ', 'ˋ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-come rounded-pill">
+                        <input class="form-check-input" type="radio" name="come" id="come3" value="沒意見"
+                            onchange="chooseAnswer(6)" onclick="changeColor('come')" required>
+                        <label class="form-check-label w-100" for="come3">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('沒', 'ㄇㄟ', 'ˊ')
+                                        showWord('意', 'ㄧ', 'ˋ')
+                                        showWord('見', 'ㄐㄧㄢ', 'ˋ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第七題 -->
+        <div class="problem">
+            <legend class="col-form-label d-flex align-items-center" style="height: 20%;">
+                <div class="px-3 d-flex align-items-center problem-word flex-wrap">
+                    7.
+                    &nbsp;
+                    <script>
+                        showWord('你', 'ㄋㄧ', 'ˇ')
+                    </script>
+                    （
+                    &nbsp;
+                    <script>
+                        showWord('妳', 'ㄋㄧ', 'ˇ')
+                    </script>
+                    ）
+                    <script>
+                        showWord('願', 'ㄩㄢ', 'ˋ')
+                        showWord('意', 'ㄧ', 'ˋ')
+                        showWord('跟', 'ㄍㄣ', '')
+                        showWord('朋', 'ㄆㄥ', 'ˊ')
+                        showWord('友', 'ㄧㄡ', 'ˇ')
+                        showWord('或', 'ㄏㄨㄛ', 'ˋ')
+                        showWord('家', 'ㄐㄧㄚ', '')
+                        showWord('人', 'ㄖㄣ', 'ˊ')
+                        showWord('分', 'ㄈㄣ', '')
+                        showWord('享', 'ㄒㄧㄤ', 'ˇ')
+                        showWord('新', 'ㄒㄧㄣ', '')
+                        showWord('屋', 'ㄨ', '')
+                        showWord('環', 'ㄏㄨㄢ', 'ˊ')
+                        showWord('境', 'ㄐㄧㄥ', 'ˋ')
+                        showWord('教', 'ㄐㄧㄠ', 'ˋ')
+                        showWord('育', 'ㄩ', 'ˋ')
+                        showWord('園', 'ㄩㄢ', 'ˊ')
+                        showWord('區', 'ㄑㄩ', '')
+                        showWord('嗎', '˙ㄇㄚ', '')
+                    </script>
+                    ?
+                </div>
+            </legend>
+            <div class="d-flex item-sm" style="height: 80%;">
+                <div class=" px-3 w-100 py-2">
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-share rounded-pill">
+                        <input class="form-check-input" type="radio" name="share" id="share1" value="願意"
+                            onchange="chooseAnswer(8)" onclick="changeColor('share')" required>
+                        <label class="form-check-label w-100" for="share1">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                    <script>
+                                        showWord('願', 'ㄩㄢ', 'ˋ')
+                                        showWord('意', 'ㄧ', 'ˋ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-share rounded-pill">
+                        <input class="form-check-input" type="radio" name="share" id="share2" value="不願意"
+                            onchange="chooseAnswer(8)" onclick="changeColor('share')" required>
+                        <label class="form-check-label w-100" for="share2">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('不', 'ㄅㄨ', 'ˊ')
+
+                                        showWord('願', 'ㄩㄢ', 'ˋ')
+                                        showWord('意', 'ㄧ', 'ˋ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-share rounded-pill">
+                        <input class="form-check-input" type="radio" name="share" id="share3" value="沒意見"
+                            onchange="chooseAnswer(8)" onclick="changeColor('share')" required>
+                        <label class="form-check-label w-100" for="share3">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('沒', 'ㄇㄟ', 'ˊ')
+                                        showWord('意', 'ㄧ', 'ˋ')
+                                        showWord('見', 'ㄐㄧㄢ', 'ˋ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第八題 -->
+        <div class="problem">
+            <legend class="col-form-label d-flex align-items-center" style="height: 20%;">
+                <div class="px-3 d-flex align-items-center problem-word flex-wrap">
+                    8.
+                    &nbsp;
+                    <script>
+                        showWord('你', 'ㄋㄧ', 'ˇ')
+                    </script>
+                    （
+                    &nbsp;
+                    <script>
+                        showWord('妳', 'ㄋㄧ', 'ˇ')
+                    </script>
+                    ）
+                    <script>
+                        showWord('對', 'ㄉㄨㄟ', 'ˋ')
+                        showWord('於', 'ㄩ', 'ˊ')
+                        showWord('導', 'ㄉㄠ', 'ˇ')
+                        showWord('覽', 'ㄌㄢ', 'ˇ')
+                        showWord('人', 'ㄖㄣ', 'ˊ')
+                        showWord('員', 'ㄩㄢ', 'ˊ')
+                        showWord('的', '˙ㄉㄜ', '')
+                        showWord('導', 'ㄉㄠ', 'ˇ')
+                        showWord('覽', 'ㄌㄢ', 'ˇ')
+                        showWord('解', 'ㄐㄧㄝ', 'ˇ')
+                        showWord('說', 'ㄕㄨㄛ', '')
+                        showWord('內', 'ㄋㄟ', 'ˋ')
+                        showWord('容', 'ㄖㄨㄥ', 'ˊ')
+                        showWord('感', 'ㄍㄢ', 'ˇ')
+                        showWord('覺', 'ㄐㄩㄝ', 'ˊ')
+                        showWord('如', 'ㄖㄨ', 'ˊ')
+                        showWord('何', 'ㄏㄜ', 'ˊ')
+                    </script>
+                    ?
+                </div>
+            </legend>
+            <div class="d-flex item-sm" style="height: 80%;">
+                <div class=" px-3 w-100 py-2">
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-understand rounded-pill">
+                        <input class="form-check-input" type="radio" name="understand" id="understand1" value="聽懂"
+                            onchange="chooseAnswer(7)" onclick="changeColor('understand')" required>
+                        <label class="form-check-label w-100" for="understand1">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('聽', 'ㄊㄧㄥ', '')
+                                        showWord('懂', 'ㄉㄨㄥ', 'ˇ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-understand rounded-pill">
+                        <input class="form-check-input" type="radio" name="understand" id="understand2" value="聽不太懂"
+                            onchange="chooseAnswer(7)" onclick="changeColor('understand')" required>
+                        <label class="form-check-label w-100" for="understand2">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <script>
+                                        showWord('聽', 'ㄊㄧㄥ', '')
+                                        showWord('不', 'ㄅㄨ', 'ˋ')
+                                        showWord('太', 'ㄊㄞ', 'ˋ')
+                                        showWord('懂', 'ㄉㄨㄥ', 'ˇ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-understand rounded-pill">
+                        <input class="form-check-input" type="radio" name="understand" id="understand3" value="完全聽不懂"
+                            onchange="chooseAnswer(7)" onclick="changeColor('understand')" required>
+                        <label class="form-check-label w-100" for="understand3">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center ">
+                                    <script>
+                                        showWord('完', 'ㄨㄢ', 'ˊ')
+                                        showWord('全', 'ㄑㄩㄢ', 'ˊ')
+                                        showWord('聽', 'ㄊㄧㄥ', '')
+                                        showWord('不', 'ㄅㄨ', 'ˋ')
+                                        showWord('懂', 'ㄉㄨㄥ', 'ˇ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第九題 -->
+        <div class="problem">
+            <legend class="col-form-label d-flex align-items-center" style="height: 20%;">
+                <div class="px-3 d-flex align-items-center problem-word flex-wrap">
+                    9.
+                    &nbsp;
+                    <script>
+                        showWord('你', 'ㄋㄧ', 'ˇ')
+                    </script>
+                    （
+                    &nbsp;
+                    <script>
+                        showWord('妳', 'ㄋㄧ', 'ˇ')
+                    </script>
+                    ）
+                    <script>
+                        showWord('覺', 'ㄐㄩㄝ', 'ˊ')
+                        showWord('得', '˙ㄉㄜ', '')
+                        showWord('園', 'ㄩㄢ', 'ˊ')
+                        showWord('區', 'ㄑㄩ', '')
+                        showWord('展', 'ㄓㄢ', 'ˇ')
+                        showWord('館', 'ㄍㄨㄢ', 'ˇ')
+                        showWord('及', 'ㄐㄧ', 'ˊ')
+                        showWord('導', 'ㄉㄠ', 'ˇ')
+                        showWord('覽', 'ㄌㄢ', 'ˇ')
+                        showWord('內', 'ㄋㄟ', 'ˋ')
+                        showWord('容', 'ㄖㄨㄥ', 'ˊ')
+                        showWord('有', 'ㄧㄡ', 'ˇ')
+                        showWord('需', 'ㄒㄩ', '')
+                        showWord('要', 'ㄧㄠ', 'ˋ')
+                        showWord('改', 'ㄍㄞ', 'ˇ')
+                        showWord('進', 'ㄐㄧㄣ', 'ˋ')
+                        showWord('的', '˙ㄉㄜ', '')
+                        showWord('地', 'ㄉㄧ', 'ˋ')
+                        showWord('方', 'ㄈㄤ', '')
+                        showWord('嗎', '˙ㄇㄚ', '')
+                    </script>
+                    ?
+                </div>
+            </legend>
+            <div class="d-flex item-sm" style="height: 80%;">
+                <div class=" px-3 w-100 py-2">
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-interesting rounded-pill">
+                        <input class="form-check-input" type="radio" name="interesting" id="interesting1" value="有"
+                            onchange="chooseAnswer(9)" onclick="changeColor('interesting')" required>
+                        <label class="form-check-label w-100" for="interesting1">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                    <script>
+                                        showWord('有', 'ㄧㄡ', 'ˇ')
+                                    </script>
+                                    ，
+                                    <script>
+                                        showWord('請', 'ㄑㄧㄥ', 'ˇ')
+                                        showWord('接', 'ㄐㄧㄝ', '')
+                                        showWord('續', 'ㄒㄩ', 'ˋ')
+                                        showWord('回', 'ㄏㄨㄟ', 'ˊ')
+                                        showWord('答', 'ㄉㄚ', 'ˊ')
+                                        showWord('第', 'ㄉㄧ', 'ˋ')
+                                    </script>
+                                    10
+                                    &nbsp;
+                                    <script>
+                                        showWord('題', 'ㄊㄧ', 'ˊ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+
+                    <div
+                        class="form-check d-flex justify-content-center px-5 py-2 mb-4 item-word problem-interesting rounded-pill">
+                        <input class="form-check-input" type="radio" name="interesting" id="interesting2" value="無"
+                            onchange="chooseAnswer(10)" onclick="changeColor('interesting')" required>
+                        <label class="form-check-label w-100" for="interesting2">
+                            <legend class="col-form-label">
+                                <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                    <script>
+                                        showWord('無', 'ㄨ', 'ˊ')
+                                    </script>
+                                </div>
+                            </legend>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第十題 -->
+        <div class="problem">
+            <legend class="col-form-label d-flex align-items-center" style="height: 20%;">
+                <div class="px-3 d-flex align-items-center problem-word flex-wrap">
+                    10.
+                    &nbsp;
+                    <script>
+                        showWord('有', 'ㄧㄡ', 'ˇ')
+                        showWord('想', 'ㄒㄧㄤ', 'ˇ')
+                        showWord('對', 'ㄉㄨㄟ', 'ˋ')
+                        showWord('園', 'ㄩㄢ', 'ˊ')
+                        showWord('區', 'ㄑㄩ', '')
+                        showWord('說', 'ㄕㄨㄛ', '')
+                        showWord('什', 'ㄕㄜ', 'ˊ')
+                        showWord('麼', '˙ㄇㄜ', '')
+                        showWord('悄', 'ㄑㄧㄠ', '')
+                        showWord('悄', 'ㄑㄧㄠ', '')
+                        showWord('話', 'ㄏㄨㄚ', 'ˋ')
+                        showWord('嗎', '˙ㄇㄚ', '')
+                    </script>
+                    ?
+                </div>
+            </legend>
+            <div class="d-flex " style="height: 80%;">
+                <div class=" px-3 w-100 py-2">
+                    <div class="form-check d-flex justify-content-center py-2 mb-4">
+                        <textarea rows="10" class="form-control" type="text" name="suggest" id="suggest" value=""
+                            autocomplete="off" onchange="getStr(10,this.id)" 
+                            style="resize : none;"> </textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="finished" class="problem d-flex align-items-center justify-content-center">
+            <div>
+                <button id="submit" type="submit" class="px-5 rounded-pill btn col-sm-12 d-flex justify-content-center"
+                    style="background: #01cad8;color:#fff">
+                    <div class="d-flex align-items-center">
+                        <script>
+                            showWord('送', 'ㄙㄨㄥ', 'ˋ')
+                            showWord('出', 'ㄔㄨ', '')
+                        </script>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+    </form>
+    <div id="compelete-bar" class="position-fixed px-3 pb-1 d-flex align-items-center" style="bottom: 0;right:0">
+        <div class="progress w-100">
+            <div id="progressBar" class="progress-bar bg-info" role="progressbar" style="width: 0%" aria-valuenow="20"
+                aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="btn-group ml-2" role="group" aria-label="Basic example">
+            <button id="button-left" type="button" class="btn btn-secondary"><i class="fas fa-angle-left"></i></button>
+            <button id="button-right" type="button" class="btn btn-secondary"><i
+                    class='fas fa-angle-right'></i></button>
+        </div>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript" src="questionnaire.js"></script>
+
+</body>
+
+</html>

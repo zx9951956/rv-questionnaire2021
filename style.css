@@ -1,0 +1,233 @@
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  max-height: 100vh;
+  height: 100vh;
+  color: #4b4748;
+}
+
+span {
+  font-family: PMingLiU;
+  font-size: 20px;
+}
+
+.index {
+  max-height: 100vh;
+  height: 100vh;
+
+}
+
+.word {
+  font-size: 18px;
+}
+
+.yin {
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+  white-space: nowrap;
+  font-size: 12px;
+  -webkit-text-size-adjust: none;
+  -webkit-transform: scale(.5);
+  letter-spacing: -1px;
+}
+
+.title,
+.title .word {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+
+.title .diao {
+  font-size: 12px;
+  -webkit-transform: scale(.75);
+}
+
+.problem-word,
+.problem-word .word {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.problem-word .diao,
+.item-word .diao {
+  font-size: 12px;
+  -webkit-transform: scale(1);
+}
+
+
+.problem-sex,
+.problem-year,
+.problem-place,
+.problem-time,
+.problem-exhibitionHall,
+.problem-come,
+.problem-understand,
+.problem-share,
+.problem-interesting,
+.problem-suggest {
+  background: rgb(233, 255, 250);
+}
+
+.item-word .word {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.item-word .yin,
+.problem-word .yin {
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+  white-space: nowrap;
+  font-size: 12px;
+  -webkit-text-size-adjust: none;
+  -webkit-transform: scale(.75);
+  letter-spacing: -1px;
+}
+#next{
+  display: none;
+}
+
+.padding-5 {
+  padding: 0 3rem;
+}
+
+@media screen and (max-width: 460px) {
+  /* 
+  .title,
+  .title .word {
+    font-size: 16px;
+    font-weight: 700;
+    -webkit-transform: scale(.8);
+  } */
+  .index-body {
+    -webkit-transform: scale(.75);
+  }
+  .padding-5 {
+    padding: 0;
+  }
+
+  .item-word .word {
+    font-size: 12px;
+    font-weight: 700;
+    -webkit-transform: scale(.8);
+
+  }
+
+  .item-word .yin,
+  .problem-word .yin {
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    white-space: nowrap;
+    font-size: 12px;
+    -webkit-text-size-adjust: none;
+    -webkit-transform: scale(.5);
+    letter-spacing: -1px;
+  }
+
+  .problem-word,
+  .problem-word .word {
+    font-size: 14px;
+    font-weight: 700;
+
+  }
+  .item-sm{
+    -webkit-transform: scale(.8);
+
+  }
+}
+
+
+
+input[type="radio"] {
+  opacity: 0;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+.problem {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background: rgb(254, 254, 254);
+  padding: 5%;
+}
+
+.problem:nth-child(1) {
+  z-index: 11;
+}
+
+.problem:nth-child(2) {
+  z-index: 10;
+}
+
+.problem:nth-child(3) {
+  z-index: 9;
+}
+
+.problem:nth-child(4) {
+  z-index: 8;
+}
+
+.problem:nth-child(5) {
+  z-index: 7;
+}
+
+.problem:nth-child(6) {
+  z-index: 6;
+}
+
+.problem:nth-child(7) {
+  z-index: 5;
+}
+
+.problem:nth-child(8) {
+  z-index: 4;
+}
+
+.problem:nth-child(9) {
+  z-index: 3;
+}
+
+.problem:nth-child(10) {
+  z-index: 2;
+}
+
+.problem:nth-child(11) {
+  z-index: 1;
+}
+
+.previous {
+  animation-fill-mode: forwards;
+  animation-name: previous;
+  animation-duration: .7s;
+}
+
+@keyframes previous {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -100vw;
+  }
+}
+
+#compelete-bar {
+  width: 50%;
+  z-index: 12;
+}
+
+
+
+@media screen and (max-width: 720px) {
+  #compelete-bar {
+    width: 100%;
+  }
+}

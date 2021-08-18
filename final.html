@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-TW">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+    <link rel="canonical" href="https://letswrite.tw/custom-google-form/">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" .css" type="text/css" />
+    <title>線上問卷</title>
+    <script>
+        function showWord(word, yin, diao) {
+            document.write('<div class="d-flex"><div class="word d-flex align-items-center">' + word +
+                '</div><div class="yin d-flex justify-content-center" >' + yin +
+                '</div><div class="diao mr-1 d-flex align-items-center">' +
+                diao + '</div></div>');
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+        <div id="finished" class="problem d-flex align-items-center justify-content-center">
+            <div>
+                <legend class="col-form-label">
+                    <div class="d-flex align-items-center justify-content-center flex-wrap">
+                        <script>
+                            showWord('問', 'ㄨㄣ', 'ˋ')
+                            showWord('卷', 'ㄐㄩㄢ', 'ˋ')
+                            showWord('結', 'ㄐㄧㄝ', 'ˊ')
+                            showWord('束', 'ㄕㄨ', 'ˋ')
+                            showWord('囉', '˙ㄌㄨㄛ', '')
+                        </script>
+                        !
+                    </div>
+                </legend>
+                <legend class="mb-3 col-form-label">
+                    <div class="d-flex align-items-center justify-content-center flex-wrap">
+                        <script>
+                            showWord('非', 'ㄈㄟ', '')
+                            showWord('常', 'ㄔㄤ', 'ˊ')
+                            showWord('謝', 'ㄒㄧㄝ', 'ˋ')
+                            showWord('謝', 'ㄒㄧㄝ', 'ˋ')
+                            showWord('你', 'ㄋㄧ', 'ˇ')
+                        </script>
+                        （
+                        &nbsp;
+                        <script>
+                            showWord('妳', 'ㄋㄧ', 'ˇ')
+                        </script>
+                        ）
+                        <script>
+                            showWord('的', '˙ㄉㄜ', '')
+                            showWord('回', 'ㄏㄨㄟ', 'ˊ')
+                            showWord('答', 'ㄉㄚ', 'ˊ')
+                        </script>
+                        。
+                    </div>
+                </legend>
+
+                <button type="submit" class="px-5 rounded-pill btn col-sm-12 d-flex justify-content-center"
+                    style="background: #01cad8;color:#fff" onclick="window.location.assign('./index.html')">
+                    <div class="d-flex align-items-center">
+                        <script>
+                            showWord('回', 'ㄏㄨㄟ', 'ˊ')
+                            showWord('首', 'ㄕㄡ', 'ˇ')
+                            showWord('頁', 'ㄧㄝ', 'ˋ')
+                        </script>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+    </form>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</body>
+
+</html>
