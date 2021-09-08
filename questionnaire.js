@@ -142,7 +142,7 @@ $('#submit').on('click', function () {
         
         $.ajax({
             type: 'POST',
-            url: 'https://docs.google.com/forms/d/e/1FAIpQLSdNE7Q1bD2xM1DeUc0Uwnl105tptQEn9hJZ_cDd3B_7oeQcBA/viewform',
+            url: 'https://docs.google.com/forms/u/1/d/e/1FAIpQLSfEJDd1XawO8NXaYVgR6rtUqQkBJvs9eM09iE0o6nwsOp89tA/formResponse',
             data: data,
             contentType: 'application/json',
             dataType: 'jsonp',
