@@ -147,8 +147,7 @@ $('#submit').on('click', function () {
             contentType: 'application/json',
             dataType: 'jsonp',
             complete: function () {
-                console.log('123')
-                //window.location.assign('./final.html')
+                window.location.assign('./final.html')
             }
         });
     } else {
