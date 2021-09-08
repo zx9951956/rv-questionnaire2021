@@ -139,6 +139,7 @@ $('#submit').on('click', function () {
     };
 
     if (state == 0) {
+        
         $.ajax({
             type: 'POST',
             url: 'https://docs.google.com/forms/d/e/1FAIpQLSdNE7Q1bD2xM1DeUc0Uwnl105tptQEn9hJZ_cDd3B_7oeQcBA/viewform',
@@ -146,7 +147,8 @@ $('#submit').on('click', function () {
             contentType: 'application/json',
             dataType: 'jsonp',
             complete: function () {
-                window.location.assign('./final.html')
+                console.log('123')
+                //window.location.assign('./final.html')
             }
         });
     } else {
