@@ -125,16 +125,16 @@ $('#submit').on('click', function () {
     };
     // post
     var data = {
-        'entry.678731899': sex(),
-        'entry.985182338': year(),
-        'entry.299271935': place(),
-        'entry.1801503054': time(),
-        'entry.1739358294': exhibitionHall(),
-        'entry.509556683': come(),
-        'entry.377136009': understand(),
-        'entry.859527971': share(),
-        'entry.1560278706': interesting(),
-        'entry.1950067070': suggest()
+        'entry.509153361': sex(),
+        'entry.288729110': year(),
+        'entry.177568123': place(),
+        'entry.2024597737': time(),
+        'entry.2111833018': exhibitionHall(),
+        'entry.1601680183': come(),
+        'entry.1754042723': understand(),
+        'entry.1752776815': share(),
+        'entry.440156897': interesting(),
+        'YPqjbf': suggest()
 
     };
 
@@ -142,7 +142,7 @@ $('#submit').on('click', function () {
         
         $.ajax({
             type: 'POST',
-            url: 'https://docs.google.com/forms/d/e/1FAIpQLSdNE7Q1bD2xM1DeUc0Uwnl105tptQEn9hJZ_cDd3B_7oeQcBA/viewform?usp=sf_link',
+            url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdNE7Q1bD2xM1DeUc0Uwnl105tptQEn9hJZ_cDd3B_7oeQcBA/formResponse',
             data: data,
             contentType: 'application/json',
             dataType: 'jsonp',
